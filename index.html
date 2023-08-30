@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>learn vue :)</h1>
+    <div id="app">
+        <div v-if="show">
+            <p>{{title}}</p>
+            <p>{{author}}</p>
+            <p>{{age}}</p>
+        </div>
+        <br>
+        <button v-on:click="age++">Increase age</button>
+        <button @click="age--">Decrease age</button>
+        <br><br>
+        <button @click="count++">
+            Count is: {{ count }}
+        </button>
+        <button @click="changCount">
+            Count is: {{ count }}
+        </button>
+        <br><br>
+        <!-- <div @click="title = 'someting else'">Cheang book title</div> -->
+        <div @click="chageTitle('Words of Randiance')">Cheang book title</div>
+        <br><br>
+        <button @click="toggleShow">
+            <span v-if="show">Hide Books</span>
+            <!-- <span v-if="!show">show Books</span> -->
+            <span v-else>show Books</span>
+            <!-- <span v-if="show == flase">show Books</span> -->
+        </button>
+        <br><br>
+
+        <div v-show="show">currently showing.</div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

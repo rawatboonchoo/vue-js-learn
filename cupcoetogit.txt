@@ -1,0 +1,11 @@
+echo "# vue-js-learn" >> README.md
+git init  //สร้างไฟล์ที่เป็นนามสกุล .git
+git add . README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rawatboonchoo/vue-js-learn.git
+git push -u origin main
+
+----------------------------
+git config --global user.email "boonchoo.rawat@gmail.com"
+git config --global user.name "rawatboonchoo"
