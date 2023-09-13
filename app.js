@@ -13,7 +13,8 @@ const app = Vue.createApp({
             title   : _strTitle,
             author  : _strName,
             age     : _intAge,
-            count   : _intCount
+            count   : _intCount,
+            message : 'Hover Me!'
         }
     },
     methods: {
@@ -28,6 +29,17 @@ const app = Vue.createApp({
             // this.show = false
             this.show = !this.show
         },
+        handleEvent(e){
+            console.log(e, e.type)
+        },
+        mouseover: function(e){
+            this.message = 'Good!'
+            console.log(e, e.type)
+          },    
+        mouseleave: function(e){
+            this.message = 'Hover Me!'
+            console.log(e, e.type)
+          }
     },
 })
 app.mount('#app')
